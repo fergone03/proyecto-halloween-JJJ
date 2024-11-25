@@ -1,0 +1,217 @@
+body,
+html {
+  max-width: 100%;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+@keyframes salirDelSuelo {
+  0% {
+    bottom: -200px;
+  }
+  50% {
+    bottom: 20%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+#manoZombie {
+  animation: salirDelSuelo 4s forwards;
+  width: 40%;
+  z-index: 10;
+}
+#manoZombie.animar {
+  animation: salirDelSuelo 4s forwards;
+}
+.aTotal {
+  text-decoration: none;
+  color: #171717;
+}
+.prePagina {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+}
+
+@keyframes moverDerecha {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moverIzquierda {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.conFuenteBlood {
+  font-family: navHall;
+}
+header {
+  display: none;
+}
+
+h2 {
+  margin-top: 10px;
+  color: #ff7518;
+  margin-bottom: 10px;
+}
+h3 {
+  color: #ff7518;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #c1c1c1;
+}
+
+
+.imagenJoseC {
+  text-align: center;
+}
+
+.imagenJoseC img {
+  margin-top: 2%;
+  width: 50%;
+  height: auto;
+}
+
+.imagenJuliC {
+  text-align: center;
+}
+.imagenJuliC img {
+  margin-top: 2%;
+  width: 50%;
+  height: auto;
+  opacity: 0.5;
+}
+.imagenJuliC,
+.imagenJaviC.imagenJoseC p {
+  color: #2c2c2c;
+}
+
+.wrapNieve {
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center bottom;
+  overflow: hidden;
+  position: absolute;
+}
+.nieve,
+.nieve:before,
+.nieve:after {
+  position: absolute;
+  top: -650px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: radial-gradient(4px 4px at 100px 50px, #fff, transparent),
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent),
+    radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent),
+    radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent),
+    radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent),
+    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent),
+    radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent),
+    radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent),
+    radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+  background-size: 650px 650px;
+  animation: nieve 3s linear infinite;
+  content: "";
+}
+
+.nieve:after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+.nieve:before {
+  margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+@keyframes nieve {
+  to {
+    transform: translateY(650px);
+  }
+}
+#fondoBackground {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 900;
+}
+
+#screamer-img {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#screamer-img-2 {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#screamer-img-3 {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#screamer-win {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}

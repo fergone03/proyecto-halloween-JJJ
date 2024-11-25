@@ -1,0 +1,343 @@
+/* Estilos generales para el cuerpo y la página completa */
+body,
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Configuración del contenedor de tarjetas: grilla de 4 columnas en pantallas grandes */
+#cards-container {
+  margin: auto;
+  width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 6%;
+  gap: 20px;
+}
+
+/* Estilos de las tarjetas, incluyendo sombreado, tamaño y efectos de hover */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 250px;
+  min-width: 250px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial;
+  backdrop-filter: blur(10px);
+  background: rgba(20, 0, 10, 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10%;
+  z-index: 2;
+  transition: transform 0.7s ease;
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos de los títulos y texto de las tarjetas */
+.card h1 {
+  color: #ff8215;
+  margin-top: 0.5em;
+}
+
+.card p {
+  color: rgb(167, 167, 167);
+}
+
+.card img {
+  height: 20em;
+  width: 100%;
+}
+
+/* Configuración de los botones en las tarjetas */
+.button-group {
+  width: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+/* Efecto de hover para el botón de favoritos */
+.favorite-btn {
+  transition: transform 0.3s ease;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.3);
+}
+
+.ver-receta-btn {
+  width: 100%;
+  color: white;
+  background-color: #000;
+  font-size: 16px;
+}
+
+/* Estilo general de los botones en las tarjetas */
+.card button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Estilos específicos para tarjetas premium */
+.card.premium {
+  border: 2px solid #bb9f00;
+  box-shadow: 0 0 20px rgb(255, 217, 0);
+}
+
+/* Estilo de la descripción dentro de las tarjetas */
+.descripcion {
+  margin: 1em 0em;
+}
+
+/* Configuración de la sección de contenido de recetas */
+.texto-recetas {
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Estilos de los títulos en la sección de recetas */
+.texto-recetas h1 {
+  color: #ff6f00;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.texto-recetas h2 {
+  color: #c70000;
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Estilo de los párrafos en la sección de recetas */
+.texto-recetas p {
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 15px;
+}
+
+.texto-recetas ul,
+.texto-recetas ol {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.texto-recetas li {
+  margin: 5px 0;
+  color: #e0e0e0;
+}
+
+.texto-recetas .decoracion {
+  font-size: 0.9em;
+  color: #b3b3b3;
+  margin-top: 15px;
+}
+
+/* Configuración especial para recetas premium */
+.receta-premium {
+  border: 2px solid rgb(187, 159, 0);
+  box-shadow: 0 0 20px rgb(255, 217, 0);
+}
+
+/* Estilos para el contenedor principal */
+main {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Configuración del contenedor de imagen con efecto de hover */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+#corona {
+  margin-top: -18%;
+  margin-left: 56%;
+  position: absolute;
+  width: 150px;
+  z-index: 1;
+  transform: rotate(20deg);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+}
+
+.image-container:hover #corona {
+  opacity: 1;
+  transform: scale(1.3) rotate(20deg);
+}
+
+/* Estilos del menú lateral y su transición de deslizamiento */
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  color: white;
+  overflow: hidden;
+  transition: right 0.3s ease;
+  z-index: 10;
+  border-left: #e0e0e0 1px solid;
+}
+
+.sidebar-menu {
+  padding-top: 50px;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu ul li {
+  padding: 15px;
+}
+
+.sidebar-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar-menu ul li a:hover {
+  background-color: #575757;
+}
+
+/* Estilos del botón para abrir/cerrar el menú lateral */
+.menu-toggle-btn {
+  background: #111;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: fixed;
+  top: 100px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px 0 0 5px;
+  right: 0;
+  transition: right 0.3s ease;
+  border-top: #e0e0e0 1px solid;
+  border-left: #e0e0e0 1px solid;
+  border-bottom: #e0e0e0 1px solid;
+  z-index: 3;
+}
+
+/* Estilo para mostrar el menú lateral cuando está abierto */
+#sidebar.open {
+  right: 0;
+}
+
+/* Ajuste de posición del botón cuando el menú está abierto */
+#sidebar.open + .menu-toggle-btn {
+  right: 250px;
+}
+
+aside button {
+  margin-left: 10px;
+  background-color: transparent;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+aside h2 {
+  margin-left: 1.5rem;
+  color: #ff6f00;
+}
+/* Ajustes responsive: adaptaciones para pantallas medianas */
+@media (max-width: 1024px) {
+  #cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    margin-bottom: 15%;
+  }
+}
+
+/* Ajustes responsive: adaptaciones para pantallas pequeñas */
+@media (max-width: 600px) {
+  #cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 15em;
+  }
+
+  .card {
+    margin-bottom: 20%;
+  }
+
+  .texto-recetas {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+}
+/* Ajustes responsive: adaptaciones para pantallas extremadamente grandes */
+@media (min-width: 2000px) and (min-height: 2000px) {
+  #cards-container {
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+  }
+
+  #corona {
+    display: none;
+  }
+
+  .card img {
+    height: 30em;
+    width: 100%;
+  }
+
+  .card {
+    min-width: 400px;
+    margin-bottom: 12%;
+    max-width: 400px;
+    font-size: 1.3em;
+  }
+
+  .ver-receta-btn {
+    font-size: 1.5em; 
+    padding: 15px 25px;
+  }
+
+  .favorite-btn {
+    font-size: 1.5em;
+  }
+
+  .menu-toggle-btn {
+    font-size: 3em; /* Aumenta el tamaño de fuente del botón */
+    width: 90px; /* Aumenta el ancho del botón */
+    height: 90px; /* Aumenta la altura del botón */
+  }
+
+  .texto-recetas {
+    max-width: 75%;
+    margin: 40px auto;
+    padding: 35px;
+    font-size: 1.2em;
+  }
+}
+
+
+
